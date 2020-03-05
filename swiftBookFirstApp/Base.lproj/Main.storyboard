@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Все места-->
+        <!--Люблю кушать-->
         <scene sceneID="J5T-hy-sgI">
             <objects>
                 <tableViewController id="nHU-1y-2j7" customClass="RootTableViewController" customModule="swiftBookFirstApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                             <outlet property="delegate" destination="nHU-1y-2j7" id="LKB-2X-aeV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Все места" id="QmF-Ej-7Ez"/>
+                    <navigationItem key="navigationItem" title="Люблю кушать" id="QmF-Ej-7Ez"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhD-JL-Zze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,9 +40,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uiL-a1-AfA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="saK-vv-au8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backIndicatorImage="I" id="saK-vv-au8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="39"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="25"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -54,4 +60,7 @@
             <point key="canvasLocation" x="100.00000000000001" y="217.63392857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="I" width="16" height="16"/>
+    </resources>
 </document>

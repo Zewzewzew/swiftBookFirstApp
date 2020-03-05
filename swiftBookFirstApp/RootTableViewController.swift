@@ -10,11 +10,15 @@ import UIKit
 
 class RootTableViewController: UITableViewController {
     
-
+    let a = 10
     
-    let restaurantNames = ["Бокаччо","Юнион", "Sushi White", "Шаверма",
-                           "Токио-Сити","Ларек у окна", "Beer Travel", "Контакт бар",
-                           "Вольчека","Макдональдс", "KFC", "Еще одна Шаверма"]
+     let restaurantNames = [
+           "Burger Heroes", "Kitchen", "Bonsai", "Дастархан",
+           "Индокитай", "X.O", "Балкан Гриль", "Sherlock Holmes",
+           "Speak Easy", "Morris Pub", "Вкусные истории",
+           "Классик", "Love&Life", "Шок", "Бочка"
+       ]
+
 
     
     override func viewDidLoad() {
@@ -33,6 +37,9 @@ class RootTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",for: indexPath)
         
         cell.textLabel?.text = restaurantNames[indexPath.row]
+        cell.imageView?.image = UIImage(named: restaurantNames[indexPath.row])
+        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
+        cell.imageView?.clipsToBounds = true
         return cell
     }
 
