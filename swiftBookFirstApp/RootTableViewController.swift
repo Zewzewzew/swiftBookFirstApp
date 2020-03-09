@@ -10,15 +10,10 @@ import UIKit
 
 class RootTableViewController: UITableViewController {
 
+
+
+    let places = Place.getPlaces()
     
-     let restaurantNames = [
-           "Burger Heroes", "Kitchen", "Bonsai", "Дастархан",
-           "Индокитай", "X.O", "Балкан Гриль", "Sherlock Holmes",
-           "Speak Easy", "Morris Pub", "Вкусные истории",
-           "Классик", "Love&Life", "Шок", "Бочка"
-       ]
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +21,7 @@ class RootTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantNames.count
+        return places.count
     }
     
     
@@ -35,13 +30,18 @@ class RootTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",for: indexPath) as! CustomTableViewCell
         
-        cell.placeName.text = restaurantNames[indexPath.row]
-        cell.placeImage.image = UIImage(named: restaurantNames[indexPath.row])
+        cell.placeName.text = places[indexPath.row].name
+        cell.placeType.text = places[indexPath.row].type
+        cell.placeLocation.text = places[indexPath.row].location
+
+        cell.placeImage.image = UIImage(named: places[indexPath.row].image)
         cell.placeImage.layer.cornerRadius = cell.placeImage.frame.size.height / 2
         cell.placeImage.clipsToBounds = true
         return cell
     }
 
-    
+    @IBAction func cancelAction( _ segue: UIStoryboardSegue) {
+        
+    }
     
 }
